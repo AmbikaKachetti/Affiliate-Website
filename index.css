@@ -1,30 +1,40 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 *{
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Poppins";
+    margin: 0;
+    transition: 0.2s;
 }
 .container{
     display: flex;
     justify-content: space-between;
     align-items: center;
     font-weight: 300;
-    border-bottom: 1px solid rgb(228, 228, 228);
     position: sticky;
-    background-color: #ffffff;
     top: 0;
+
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    border-bottom: 1px solid gray;
 }
 .headingText{
     font-size: 26px;
     font-weight: 400;
+    padding-left: 20px;
 }
 .WelcomeNote{
+    padding-top: 34px;
     font-size: 14px;
     font-weight: 300;
 }
 .image-style{
     border-radius: 50%;
-    height: 70px;
-    width: 70px;
+    border: none;
+    margin: 10px;
+    height: 60px;
+    width: 60px;
+    background-color: var(--bg-color);
+    color: var(--text-color);
 }
 .userInfo{
     display: flex;
@@ -34,33 +44,47 @@
     display: flex;
     flex-direction: column;
     padding-left: 7px;
-    padding-right: 50px;
-    border-right: 1px solid rgb(228, 228, 228);
+    padding-right: 35px;
+    padding-top: 15px;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    border-right: 1px solid gray;
 }
 .each-menu-item{
     display: flex;
     justify-content: start;
     align-items: center;
     gap: 15px;
+    padding: 10px 0px 0 6px;
+    margin-right: 19px;
+}
 
+.each-menu-item .img{
+    background-color: var(--bg-color);
 }
 .each-menu-item-icon{
-    height: 20px;
-    width: 20px;
+    height: 30px;
+    width: 30px;
+    padding: 5px;
+    border-radius: 10px;
+    background-color: white;
 }
 .main-conatiner{
     display: flex;
     justify-content: space-between;
+    
 }
 .each-menu-item p{
     font-size: 12px;
 }
 .Home-Screen{
+    background-color: var(--bg-color);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 20px;
+    margin: 0;
+    padding: 20px 0 0 28px;
 }
 .main-screen-cards{
     display: flex;
@@ -69,7 +93,7 @@
 .main-cards{
     display: flex;
     flex-direction: row;
-    
+    border-right: 0.1px solid var(--border-color);
 }
 .refferals, .earnings{
     background-color:#edab1b;
@@ -85,6 +109,7 @@
     font-size: 14px;
     padding: 15px;
 }
+
 .refferals-image, .earnings-image{
     height: 100px;
     width: 100px;
@@ -111,7 +136,7 @@
     border-radius: 10px;
     margin: 10px;
     padding: 20px;
-    border-color: gray;
+    background-color: white;
     box-shadow: 0px 0px 2px hwb(0 80% 19%);
 }
 .card-image{
@@ -138,10 +163,11 @@
 }
 .dropdown-list{
     position: absolute;
-    top: 75px;
+    top: 86px;
     left: -80px;
     box-shadow: 0px 0px 2px hwb(0 80% 19%);
-    background-color: white;
+    background-color: rgb(168, 166, 166);
+    color: var(--text-color);
     width: 140px;
     display: none;
     border: none;
@@ -150,6 +176,8 @@
     display: block;
 }
 .dropdown-list ul{
+    padding-top: 10px;
+    text-align: left;
     list-style-type: none;
 }
 .dropdown-list ul li{
@@ -157,12 +185,135 @@
 }
 .triangle{
     clip-path: polygon(49% 34%, 0% 100%, 100% 100%);
-    background: #e6e4e4;
+    background: rgb(168, 166, 166);
     display: block;
     width: 25px;
     height: 25px;
     position: absolute;
     top: -24px;
     left: 105px;
+}
+
+/* login */
+.main{
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.login-container{
+    width: 675px;
+    height: 528px;
+    background-color: #fff;
+    border-radius: 10px;
+    display: flex;
+
+}
+.login-image-container{
+    width: 40%;
+}
+.login-image{
+    height: 250px;
+    width: 250px;
+}
+.login-details{
+    width: 57%;
+    display: flex;
+    flex-direction: column;
+    padding: 30px 24px;
+    justify-content: space-between;
+}
+.login_heading{
+    color: #121212;
+    font-weight: 400;
+    font-size: 28px;
+    padding-bottom: 20px;
+}
+.login_username label, .login_password label{
+    font-size: 12px;
+    padding: 10px 0 5px 0;
+    display: block;
+}
+.login_username input, .login_password input{
+    padding: 10px;
+    box-shadow: 0 0 6px gray;
+    border: none;
+    width: 280px;
+    border-radius: 6px;
+}
+.login_forgot_password{
+    padding: 10px 0 10px 0;
+    color: #0e91e3;
+    font-size: 14px;
+}
+.login_button{
+    background-color: #0e91e3;
+    color: white;
+    width: 280px;
+    box-shadow: 0 0 6px gray;
+    border: none;
+    border-radius: 6px;
+    padding: 8px;
+}
+.login_create_new_account{
+    font-size: 12px;
+}
+.login_create_new_account span{
+    color: #0e91e3;
+}
+.login_close{
+    padding: 20px 25px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* toggle */
+.toggle{
+    background-color: white;
+    width: 60px;
+    height: 30px;
+    border-radius: 50px;
+    position: relative;
+    margin: 10px 0 20px 0;
+}
+.toggle-circle{
+    background-color: rgb(43, 42, 42);
+    width: 27px;
+    height: 27px;
+    border-radius: 50%;
+    position: absolute;
+    top: 1.2px;
+    cursor: pointer;
+    transition: 0.4s all;
+}
+.toggle--light{
+    left: 2px;
+}
+.toggle--dark{
+    left: 30px;
+}
+/* light dark mode */
+.--container--light{
+    --bg-color: #ffffff;
+    --text-color: black;
+    --border-color: gray;
+}
+.--container--dark{
+    --bg-color: #121212;
+    --text-color: white;
+    --border-color: gray;
 }
 
